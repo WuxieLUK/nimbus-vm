@@ -1,0 +1,12 @@
+let scores = #{"alice": 92, "bob": 85};
+scores["carol"] = 97;
+
+for (let name in keys(scores)) {
+  print(name, "->", scores[name]);
+}
+
+let total = 0;
+for (let score in values(scores)) {
+  total = total + score;
+}
+print("average =", total / len(scores));

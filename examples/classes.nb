@@ -1,0 +1,24 @@
+class Animal {
+  init(name) { this.name = name; }
+  speak() { return "..." ; }
+}
+
+class Dog < Animal {
+  speak() { return this.name + " says woof"; }
+}
+
+let dog = Dog("Rex");
+print(dog.speak());
+
+class Counter {
+  init() { this.n = 0; }
+  next() {
+    fn bump() { this.n = this.n + 1; return this.n; }
+    return bump;
+  }
+}
+
+let counter = Counter();
+let step = counter.next();
+print(step());
+print(step());

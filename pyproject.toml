@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nimbus-vm"
+version = "0.1.0"
+description = "A bytecode compiler and mark-sweep garbage-collected virtual machine for the Nimbus language"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "WuxieLUK" }]
+keywords = ["compiler", "virtual-machine", "bytecode", "programming-language", "interpreter", "garbage-collector", "zero-dependencies"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Compilers",
+    "Topic :: Software Development :: Interpreters",
+]
+
+[project.scripts]
+nimbus-vm = "nimbusvm.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

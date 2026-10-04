@@ -1,5 +1,9 @@
 # nimbus-vm
 
+![tests](https://github.com/WuxieLUK/nimbus-vm/actions/workflows/tests.yml/badge.svg)
+![python](https://img.shields.io/badge/python-3.10%2B-blue)
+![license](https://img.shields.io/github/license/WuxieLUK/nimbus-vm)
+
 一个 **从零实现编译器 + 字节码虚拟机** 的项目，语言名为 **Nimbus**。
 纯 Python 标准库、**零第三方运行时依赖**：手写词法分析器、递归下降 + Pratt 解析器、语义解析器、字节码编译器、栈式虚拟机，以及 **标记-清扫（mark-sweep）垃圾回收器**。
 

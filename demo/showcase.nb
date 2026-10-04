@@ -1,0 +1,35 @@
+// nimbus-vm 展示程序：递归、闭包、类、数据结构、循环
+
+fn fib(n) {
+  if (n < 2) { return n; }
+  return fib(n - 1) + fib(n - 2);
+}
+
+fn make_counter() {
+  let n = 0;
+  return fn() { n = n + 1; return n; };
+}
+
+class Animal {
+  init(name) { this.name = name; }
+}
+
+class Dog < Animal {
+  speak() { return this.name + " says woof"; }
+}
+
+print("fib(15) =", fib(15));
+
+let next = make_counter();
+print(next(), next(), next());
+
+let dog = Dog("Rex");
+print(dog.speak());
+
+let scores = #{"alice": 92, "bob": 85};
+scores["carol"] = 97;
+let total = 0;
+for (let score in values(scores)) {
+  total = total + score;
+}
+print("average =", total / len(scores));
